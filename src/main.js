@@ -41,6 +41,22 @@ const app = new Vue({
   router,
   store,
   vuetify,
+
+  data: {
+    headers: [
+      {
+        headerId: 1,
+        headerText: 'Table header 1'
+      }
+    ]
+  },
+  nodes: [
+    {
+      nodeId: 1,
+      nodeName: 'Node Name 1',
+      nodeState: 'State 1'
+    }
+  ],
   render (h) {
     return h(App, {
       props: {

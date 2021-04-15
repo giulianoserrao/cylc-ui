@@ -77,6 +77,26 @@ export default [
     props: true
   },
   {
+    path: '/table/:workflowName(.*)',
+    view: 'TestWidget',
+    name: 'table',
+    meta: {
+      layout: 'default',
+      toolbar: true
+    },
+    props: true
+  },
+  {
+    path: '/table/:testview(.*)',
+    view: 'TestView',
+    name: 'testview',
+    meta: {
+      layout: 'default',
+      toolbar: true
+    },
+    props: true
+  },
+  {
     path: '/guide',
     name: 'Guide',
     view: 'Guide',
