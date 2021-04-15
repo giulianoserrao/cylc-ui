@@ -87,7 +87,7 @@ export default [
     props: true
   },
   {
-    path: '/table/:testview(.*)',
+    path: '/test/:testview(.*)',
     view: 'TestView',
     name: 'testview',
     meta: {

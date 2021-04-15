@@ -1,7 +1,25 @@
 <template>
   <div>
     <h1>Table view iteration 1</h1>
+    <table style="width:100%">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </table>
   </div>
+  <!--
   <div>
     <table>
       <tr>
@@ -10,12 +28,12 @@
       <tr v-for="node of workflow" :key="node.id">
         <td>{{ node.cyclepoint }}</td>
         <td>{{ node.name }}</td>
-        <td>{{ node.state }}</td>
-        <!-- ...
-        -->
+        <td>{{ node.state }}</td>...
       </tr>
     </table>
   </div>
+  -->
+
 </template>
 
 <script>
@@ -24,7 +42,7 @@
 // import Comp from '@/components/cylc/comp/Comp.vue'
 
 export default {
-  name: "TestView",
+  name: 'TestView',
   props: {
     workflowName: {
       type: String,
