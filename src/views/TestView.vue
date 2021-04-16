@@ -1,21 +1,48 @@
 <template>
   <div>
-    <h1>Table view iteration 1</h1>
-    <table style="width:100%">
+    <h1>Table view iteration 5</h1>
+    <table width="100%">
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Age</th>
+        <th style="text-align: left">task</th>
+        <th style="text-align: left">state</th>
+        <th style="text-align: left">host</th>
+        <th style="text-align: left">job system</th>
+        <th style="text-align: left">job ID</th>
+        <th style="text-align: left">T-submit</th>
+        <th style="text-align: left">T-start</th>
+        <th style="text-align: left">T-finish</th>
+        <th style="text-align: left">dT-mean</th>
+        <th style="text-align: left">latest message</th>
       </tr>
       <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
+        <td>The</td>
+        <td>Smiths</td>
+        <td>95</td>
       </tr>
       <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
+        <td>Queen</td>
+        <td>-</td>
         <td>94</td>
+      </tr>
+      <tr>
+        <td>Guns</td>
+        <td>'n Roses</td>
+        <td>86</td>
+      </tr>
+      <tr>
+        <td>Red Hot</td>
+        <td>Chilli Peppers</td>
+        <td>73</td>
+      </tr>
+      <tr>
+        <td>The</td>
+        <td>Strokes</td>
+        <td>84</td>
+      </tr>
+      <tr>
+        <td>Blink</td>
+        <td>182</td>
+        <td>83</td>
       </tr>
     </table>
   </div>
