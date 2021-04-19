@@ -70,7 +70,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         {{ svgPaths.stop }}
       </v-icon>
 
-      <!-- TODO: add workflow latest message -->
+      <!-- TODO: add workflow la message -->
       <span></span>
 
       <v-spacer />
@@ -89,6 +89,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             class="py-0 px-8 ma-0"
             @click="$listeners['add-tree']"
             id="toolbar-add-tree-view"
+          >
+            <v-list-item-title><v-icon>{{ svgPaths.table }}</v-icon>TestView</v-list-item-title>
+          </v-list-item>
+          <v-list-item
+              class="py-0 px-8 ma-0"
+              @click="$listeners['add-testView']"
+              id="toolbar-add-test-view"
           >
             <v-list-item-title><v-icon>{{ svgPaths.tree }}</v-icon> Tree</v-list-item-title>
           </v-list-item>
@@ -132,7 +139,8 @@ import {
   mdiPlusCircle,
   mdiFileTree,
   mdiAppleKeyboardCommand,
-  mdiMicrosoftXboxControllerMenu
+  mdiMicrosoftXboxControllerMenu,
+  mdiTable
 } from '@mdi/js'
 
 import {
@@ -157,7 +165,8 @@ export default {
       tree: mdiFileTree,
       mutations: mdiAppleKeyboardCommand,
       add: mdiPlusCircle,
-      menu: mdiMicrosoftXboxControllerMenu
+      menu: mdiMicrosoftXboxControllerMenu,
+      table: mdiTable
     },
     expecting: {
       // store state from mutations in order to compute the "enabled" attrs
