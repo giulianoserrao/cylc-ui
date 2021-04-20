@@ -87,15 +87,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <v-list class="pa-0">
           <v-list-item
             class="py-0 px-8 ma-0"
-            @click="$listeners['add-tree']"
-            id="toolbar-add-tree-view"
+            @click="$listeners['add-table-view']"
+            id="toolbar-add-table-view"
           >
-            <v-list-item-title><v-icon>{{ svgPaths.table }}</v-icon>TestView</v-list-item-title>
+            <v-list-item-title><v-icon>{{ svgPaths.table }}</v-icon> Table View</v-list-item-title>
           </v-list-item>
           <v-list-item
               class="py-0 px-8 ma-0"
-              @click="$listeners['add-testView']"
-              id="toolbar-add-test-view"
+              id="toolbar-add-tree-view"
           >
             <v-list-item-title><v-icon>{{ svgPaths.tree }}</v-icon> Tree</v-list-item-title>
           </v-list-item>
@@ -131,6 +130,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import { mapGetters, mapState } from 'vuex'
 import toolbar from '@/mixins/toolbar'
 import WorkflowState from '@/model/WorkflowState.model'
+import TestView from "../../../views/TestView";
 import {
   mdiViewList,
   mdiPlay,
