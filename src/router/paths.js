@@ -59,6 +59,15 @@ export default [
     props: true
   },
   {
+    path: '/tableview',
+    view: 'TableView',
+    name: 'tableview',
+    meta: {
+      layout: 'default'
+    },
+    props: true
+  },
+  {
     path: '/user-profile',
     name: i18n.t('App.userProfile'),
     view: 'UserProfile',
