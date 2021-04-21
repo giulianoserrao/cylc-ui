@@ -133,7 +133,8 @@ import {
   mdiPlay,
   mdiPlusBoxMultiple,
   mdiStop,
-  mdiViewList
+  mdiViewList,
+  mdiTable
 } from '@mdi/js'
 
 import {
@@ -175,7 +176,13 @@ export default {
         title: 'Mutations',
         icon: mdiAppleKeyboardCommand
 
-      }
+      },
+      {
+        name: 'tableview',
+        title: 'Table View',
+        icon: mdiTable
+
+      },
     ]
   }),
 

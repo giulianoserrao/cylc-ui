@@ -46,6 +46,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           :workflow-name="workflowName"
           tab-title="mutations"
         />
+        <table-view
+          v-for="widgetId of tableWidgets"
+          :key="widgetId"
+          :id="widgetId"
+          :workflow-name="workflowName"
+          tab-title="table"
+        />
       </lumino>
     </div>
   </div>
@@ -66,6 +73,7 @@ import MutationsView from '@/views/Mutations'
 import Vue from 'vue'
 import Toolbar from '@/components/cylc/workflow/Toolbar.vue'
 import CylcObjectMenu from '@/components/cylc/cylcObject/Menu'
+import TableView from "./TableView";
 
 export default {
   mixins: [
@@ -80,6 +88,7 @@ export default {
     }
   },
   components: {
+    TableView,
     CylcObjectMenu,
     Lumino,
     TreeComponent,
@@ -123,6 +132,12 @@ export default {
         .entries(this.widgets)
         .filter(([id, type]) => type === MutationsView.name)
         .map(([id, type]) => id)
+    },
+    tableWidgets () {
+      return Object
+         .entries(this.widgets)
+         .filter(([id, type]) => type === TableView.name)
+         .map(([id, type]) => id)
     }
   },
   beforeRouteEnter (to, from, next) {
@@ -189,7 +204,10 @@ export default {
         Vue.set(this.widgets, subscriptionId, TreeComponent.name)
       } else if (view === 'mutations') {
         Vue.set(this.widgets, (new Date()).getTime(), MutationsView.name)
-      } else {
+      } else if (view === 'table') {
+        Vue.set(this.widgets, (new Date()).getTime(), TableView.name)
+      }
+      else {
         throw Error(`Unknown view "${view}"`)
       }
     },
