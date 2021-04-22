@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  name: "TableView"
+  name: 'TableView'
 }
 </script>
 

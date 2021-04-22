@@ -73,7 +73,7 @@ import MutationsView from '@/views/Mutations'
 import Vue from 'vue'
 import Toolbar from '@/components/cylc/workflow/Toolbar.vue'
 import CylcObjectMenu from '@/components/cylc/cylcObject/Menu'
-import TableView from "./TableView";
+import TableView from './TableView'
 
 export default {
   mixins: [
@@ -135,9 +135,9 @@ export default {
     },
     tableWidgets () {
       return Object
-         .entries(this.widgets)
-         .filter(([id, type]) => type === TableView.name)
-         .map(([id, type]) => id)
+        .entries(this.widgets)
+        .filter(([id, type]) => type === TableView.name)
+        .map(([id, type]) => id)
     }
   },
   beforeRouteEnter (to, from, next) {
@@ -206,8 +206,7 @@ export default {
         Vue.set(this.widgets, (new Date()).getTime(), MutationsView.name)
       } else if (view === 'table') {
         Vue.set(this.widgets, (new Date()).getTime(), TableView.name)
-      }
-      else {
+      } else {
         throw Error(`Unknown view "${view}"`)
       }
     },
