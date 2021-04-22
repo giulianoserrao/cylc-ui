@@ -182,7 +182,7 @@ export default {
         title: 'Table View',
         icon: mdiTable
 
-      },
+      }
     ]
   }),
 
