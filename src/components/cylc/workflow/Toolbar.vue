@@ -178,8 +178,8 @@ export default {
 
       },
       {
-        name: 'table',
-        title: 'Table',
+        name: 'tableview',
+        title: 'Table View',
         icon: mdiTable
 
       }

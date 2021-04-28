@@ -46,7 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           :workflow-name="workflowName"
           tab-title="mutations"
         />
-        <table
+        <table-view
           v-for="widgetId of tableWidgets"
           :key="widgetId"
           :id="widgetId"
@@ -73,7 +73,7 @@ import MutationsView from '@/views/Mutations'
 import Vue from 'vue'
 import Toolbar from '@/components/cylc/workflow/Toolbar.vue'
 import CylcObjectMenu from '@/components/cylc/cylcObject/Menu'
-import Table from '@/views/Table'
+import TableView from '@/views/TableView'
 
 export default {
   mixins: [
@@ -88,7 +88,7 @@ export default {
     }
   },
   components: {
-    Table,
+    TableView,
     CylcObjectMenu,
     Lumino,
     TreeComponent,
@@ -136,7 +136,7 @@ export default {
     tableWidgets () {
       return Object
         .entries(this.widgets)
-        .filter(([id, type]) => type === Table.name)
+        .filter(([id, type]) => type === TableView.name)
         .map(([id, type]) => id)
     }
   },
@@ -204,8 +204,8 @@ export default {
         Vue.set(this.widgets, subscriptionId, TreeComponent.name)
       } else if (view === 'mutations') {
         Vue.set(this.widgets, (new Date()).getTime(), MutationsView.name)
-      } else if (view === 'table') {
-        Vue.set(this.widgets, (new Date()).getTime(), Table.name)
+      } else if (view === 'tableview') {
+        Vue.set(this.widgets, (new Date()).getTime(), TableView.name)
       } else {
         throw Error(`Unknown view "${view}"`)
       }
