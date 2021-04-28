@@ -59,9 +59,9 @@ export default [
     props: true
   },
   {
-    path: '/tableview',
-    view: 'TableView',
-    name: 'tableview',
+    path: '/table/:workflowName(.*)',
+    view: 'Table',
+    name: 'table',
     meta: {
       layout: 'default'
     },

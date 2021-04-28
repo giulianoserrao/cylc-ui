@@ -41,9 +41,23 @@
 </template>
 
 <script>
+import TableComponent from '../components/cylc/Table'
+
 export default {
-  name: 'TableView'
+  name: 'Table',
+
+  props: {
+    workflowName: {
+      type: String,
+      required: true
+    }
+  },
+  components: {
+    TableComponent
+  }
+
 }
+
 </script>
 
 <style scoped>
